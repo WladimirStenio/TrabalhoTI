@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Questão</title>
+    <script type="text/javascript" src="primeira.js"></script>
+</head>
+<body>
+    <div style="text-align:center">
+        <h3>Calculadora Simples</h3>
+        <input type="text" id="num1">
+        <select id="Sinais" onchange="verificaSinal()">
+            <option value="selecione"></option>
+            <option value="sum">+</option>
+            <option value="sub">-</option>
+            <option value="multi">*</option>
+            <option value="divi">/</option>
+        </select>
+        <input type="text" id="num2">
+        <br><br>
+        <button type="button" value="sumbtn" onclick="sumNumeros()">+</button>
+        <button type="button" value="subbtn" onclick="subNumeros()">-</button>
+        <button type="button" value="multbtn" onclick="multiNumeros()">*</button>
+        <button type="button" value="divibtn" onclick="diviNumeros()">/</button>
+    </div>
+</body>
+</html>
