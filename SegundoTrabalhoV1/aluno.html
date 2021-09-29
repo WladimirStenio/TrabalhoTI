@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Aluno</title>
+    <script type="text/javascript" src="aluno.js" ></script>
+</head>
+<body>
+    <div>
+        <h2 style="text-align: center;">Cadastro Do Aluno</h2>
+        Nome: <input type="text" id="nome" class="dados">
+        <br><br>
+        Matrícula: <input type="text" id="nome" class="dados">
+        <br><br>
+        Data de Nascimento: <input type="date" id="data" onblur="calculaIdade()" class="dados">
+        <br><br>
+        Ano que iniciou a faculdade: <input style="width: 80px; text-align: center ;" type="text" id="iniFacul" maxlength="4" class="dados">
+        <br><br>
+
+        <p>Selecione seu curso:</p>
+                    <select id="cursos" onchange="loadDisciplinas()" class="dados">
+                    <option value="">-</option>
+                    <option value="Ciências da Computação">Ciências da Computação</option>
+                    <option value="Engenharia Civil">Engenharia Civil</option>
+                    </select>
+
+        <p>Possui Bolsa? Caso possua selecione-a abaixo</p>         
+                    <select id="bolsas" class="dados">
+                    <option value="">-</option>  
+                    <option value="Prouni">Prouni</option>
+                    <option value="FIES">FIES</option>
+                    </select>
+
+                    <div id="divCC" style="display: none">
+                    <p>Selecione quais disciplinas já cursou: </p>
+                    <input type="checkbox" id="disciplina1">
+                        <label for="disciplina1">Lógica Matemática</label><br>
+                    <input type="checkbox" id="disciplina2">
+                        <label for="disciplina2">Matemática Discreta</label><br>
+                    <input type="checkbox" id="disciplina3">
+                        <label for="disciplina3">Circuitos</label><br>
+                    <input type="checkbox" id="disciplina4">
+                        <label for="disciplina4">Inteligência Artificial</label><br>
+
+                    </div>
+
+                    <div id="divEC" style="display: none">
+                        <p>Selecione quais disciplinas já cursou: </p>
+                        <input type="checkbox" id="disciplina5">
+                            <label for="disciplina5">Lógica De Programação 1</label><br>
+                        <input type="checkbox" id="disciplina6">
+                            <label for="disciplina6">Calculo 1</label><br>
+                        <input type="checkbox" id="disciplina7">
+                            <label for="disciplina7">Calculo 2</label><br>
+                        <input type="checkbox" id="disciplina8">
+                            <label for="disciplina8">Calculo 3</label><br>
+                        </div>
+                        <br><br>
+                        <button class="button" onclick="salvarDados()">Salvar Cadastro</button>
+                    </div>
+                    <br><br>
+                    <table id="tab" style="border: 1px solid black; white-space: nowrap; width: 100%; border-spacing: 0 0.5rem; text-align: center;">
+                        <thead >
+                            <tr style="margin-left: 5px; margin-right: 5px;">
+                                <th>Nome</th>
+                                <th>Matricula</th>
+                                <th>DDN</th>
+                                <th>Ano de Inicio</th>
+                                <th>Curso</th>
+                                <th>Bolsa</th>
+                                <th>Disciplina</th>
+                              </tr>
+                        </thead>
+                        <tbody id="bodyTable">
+
+                        </tbody>
+                      </table>
+</body>
+</html>
